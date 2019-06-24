@@ -89,15 +89,6 @@ module.exports = {
           }
         })
       }
-    },
-    loaders: {
-      less: {
-        modifyVars: {
-          'primary-color': '#157efb',
-          'link-color': '#157efb'
-        },
-        javascriptEnabled: true
-      }
     }
   }
 }
