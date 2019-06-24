@@ -1,22 +1,9 @@
-import isEmpty from 'is-blank'
-
-export default function ({ app, $axios, redirect }) {
+export default function ({ $axios }) {
   $axios.onRequest(config => {
-    const auth = app.$cookies.get('WTS.SESS')
-
-    if (!isEmpty(auth)) {
-      config.headers.common['Authorization'] = `Bearer ${auth.accessToken}`
-    }
-
-    console.log('::::: Making request to ', config)
+    console.log('Making request to ', config.url)
   })
 
   $axios.onError(err => {
     console.error(err)
-
-    if(err.response.status === 401) {
-      app.store.dispatch('logout')
-      redirect('/admin/login')
-    }
   })
 }
