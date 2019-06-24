@@ -1,0 +1,47 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+button, body {
+  font-family: Helvetica, Tahoma, Arial, PingFang SC, Hiragino Sans GB, Heiti SC, STXihei, Microsoft YaHei, SimHei, WenQuanYi Micro Hei;
+}
+
+body {
+  color: #333;
+  background: #F7F8FB;
+  -webkit-size-adjust: 100%;
+  -ms-size-adjust: 100%
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #409EFF
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1
+}
+
+.locales {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.locales a {
+  padding: 0 8px;
+}
